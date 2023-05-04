@@ -1,29 +1,38 @@
+import { useState } from 'react';
 import './App.css';
 import Button from './components/Button';
+import Counter from './components/Counter';
 import freeCodeCampLogo from './img/FCC-logo.jpg'
 
 
 function App() {
 
+  const [numClicks, setNumClicks] = useState(0);
+
 
 const manageClick = () => {
-  console.log('Click');
+ setNumClicks (numClicks + 1);
 }
 
 
 const restartCounter = () => {
-  console.log('Restart');
+  
 }
+
+
+
+
 
   return (
     <div className="App">
       <div className="FCC-logo-container">
         <img 
-        className='FCC-logo'
+        className='FCC-Logo'
         src={freeCodeCampLogo} 
         alt="FCCamp Logo" />
       </div>
       <div className="main">
+        <Counter numClicks={numClicks}/>
         <Button 
         text='Click'
         isclickButton={true}
