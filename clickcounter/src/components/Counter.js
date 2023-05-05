@@ -3,7 +3,7 @@ import '../styles/Counter.css'
 
 
 
-function Counter(numClicks){
+function Counter({numClicks}){
     return(
             <div className='counter'>
                 {numClicks}

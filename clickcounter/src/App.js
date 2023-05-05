@@ -16,7 +16,7 @@ const manageClick = () => {
 
 
 const restartCounter = () => {
-  
+  setNumClicks (0);
 }
 
 
@@ -24,6 +24,7 @@ const restartCounter = () => {
 
 
   return (
+    
     <div className="App">
       <div className="FCC-logo-container">
         <img 
